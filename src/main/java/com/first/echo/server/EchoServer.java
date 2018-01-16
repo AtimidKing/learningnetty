@@ -11,8 +11,8 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import java.net.InetSocketAddress;
 
 /**
- * author king
- * date 2018/1/16
+ * @author king
+ * @date 2018/1/16
  * Created by yking on 2018/1/16.
  */
 public class EchoServer {
@@ -23,13 +23,13 @@ public class EchoServer {
     }
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 1) {
-            System.err.println(
-                    "Usage: " + EchoServer.class.getSimpleName() +
-                            " <port>");
-            return;
-        }
-        int port = Integer.parseInt(args[0]);
+//       if (args.length != 1) {
+//            System.err.println(
+//                    "Usage: " + EchoServer.class.getSimpleName() +
+//                            " <port>");
+//            return;
+//        }
+        int port = 8888;
         new EchoServer(port).start();
     }
 

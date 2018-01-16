@@ -1,6 +1,5 @@
 package com.first.echo.client;
 
-import com.first.echo.server.EchoServerHandler;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -12,6 +11,8 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import java.net.InetSocketAddress;
 
 /**
+ * @author king 
+ * @date 2018/1/16
  * Created by yking on 2018/1/16.
  */
 public class EchoClient {
@@ -46,14 +47,14 @@ public class EchoClient {
     }
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
-            System.err.println(
-                    "Usage: " + EchoClient.class.getSimpleName() +
-                            "<host><port>");
-            return;
-        }
-        String host = args[0];
-        int port = Integer.parseInt(args[1]);
+//        if (args.length != 2) {
+//            System.err.println(
+//                    "Usage: " + EchoClient.class.getSimpleName() +
+//                            "<host><port>");
+//            return;
+//        }
+        String host = "localhost";
+        int port = 8888;
         new EchoClient(host,port).start();
     }
 }
