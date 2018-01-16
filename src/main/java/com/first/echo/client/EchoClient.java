@@ -11,7 +11,7 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import java.net.InetSocketAddress;
 
 /**
- * @author king 
+ * @author king
  * @date 2018/1/16
  * Created by yking on 2018/1/16.
  */
@@ -47,14 +47,14 @@ public class EchoClient {
     }
 
     public static void main(String[] args) throws Exception {
-//        if (args.length != 2) {
-//            System.err.println(
-//                    "Usage: " + EchoClient.class.getSimpleName() +
-//                            "<host><port>");
-//            return;
-//        }
-        String host = "localhost";
-        int port = 8888;
+        if (args.length != 2) {
+            System.err.println(
+                    "Usage: " + EchoClient.class.getSimpleName() +
+                            "<host><port>");
+            return;
+        }
+        String host = args[0];
+        int port = Integer.parseInt(args[1]);
         new EchoClient(host,port).start();
     }
 }
